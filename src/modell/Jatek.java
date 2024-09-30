@@ -34,7 +34,7 @@ public class Jatek {
 
     private void bekeres() {
         megjelenit("Melyik ládában van a kincs? (1,2,3): ");
-        valasztas = sc.nextInt();
+        valasztas = sc.nextInt() - 1;
 
     }
 
@@ -43,8 +43,8 @@ public class Jatek {
     }
 
     private String ellenorzes() {
-        String talalt = "Gratulálok, eltaláltad!";
-        String nemTalalt = "Sajnos nem talált!";
-        return ladak[valasztas].isKincs()? talalt : nemTalalt;
+        String talalt = "Gratulálok, eltaláltad!\n";
+        String nemTalalt = "Sajnos nem talált!\n";
+        return ladak[valasztas].isKincs() ? talalt : nemTalalt;
     }
 }
